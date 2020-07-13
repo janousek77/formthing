@@ -73,7 +73,27 @@ function makeCard() {
 }
 
 function edit(event) {
-  console.log(event.target.parentElement.parentElement);
+  let cardDiv = event.target.parentElement.parentElement;
+  let dest = cardDiv.children[0];
+  let loc = cardDiv.children[1];
+  let card = cardDiv.parentElement;
+  let url = card.children[0];
+
+  let newDest = prompt("Enter new name");
+  let newLoc = prompt("Enter new location");
+  let newUrl = prompt("Enter new photo url");
+
+  if (newDest.length > 0) {
+    dest.innerText = newDest;
+  }
+
+  if (newLoc.length > 0) {
+    loc.innerText = newLoc;
+  }
+
+  if (newUrl.length > 0) {
+    url.setAttribute("src", newUrl);
+  }
 }
 
 function remove(event) {
