@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1 class="display-4">Vacation Destinations WishList</h1>
+        <p class="lead">
+          Found exciting places to visition on your next vacation? Use the form
+          below to add them to your wishlist
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div id="form">
+        <form>
+          <label for="dName">Destination name</label>
+          <input
+            required
+            minlength="2"
+            type="text"
+            name="dName"
+            id="dName"
+            placeholder="Name of the destination"
+          />
+
+          <label for="location">Location</label>
+          <input
+            required
+            minlength="2"
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Where is it located"
+          />
+
+          <label for="photo">Photo</label>
+          <input
+            type="url"
+            name="photo"
+            id="photo"
+            placeholder="Enter an image url of the place"
+          />
+
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            placeholder="Where is it located"
+          ></textarea>
+
+          <button id="form-btn" type="submit">add to list</button>
+        </form>
+      </div>
+
+      <div class="card_container">
+        <h4>Enter destination details</h4>
+        <div id="cards"></div>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
