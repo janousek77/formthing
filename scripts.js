@@ -1,6 +1,7 @@
 var form = document.getElementById("form");
 
 function handleForm(event) {
+  document.getElementById("h4").innerHTML = "My Wishlist";
   event.preventDefault();
   makeCard();
   clearForm();
@@ -59,12 +60,14 @@ function makeCard() {
   editButton.setAttribute("href", "#");
   editButton.setAttribute("class", "btn btn-primary");
   editButton.innerHTML = "Edit";
+  editButton.style.backgroundColor = "#E0A800";
   editButton.addEventListener("click", edit);
   buttonDiv.appendChild(editButton);
 
   let deleteButton = document.createElement("a");
   deleteButton.setAttribute("href", "#");
   deleteButton.setAttribute("class", "btn btn-primary");
+  deleteButton.style.backgroundColor = "#C82333";
   deleteButton.innerHTML = "Remove";
   deleteButton.addEventListener("click", remove);
   buttonDiv.appendChild(deleteButton);
